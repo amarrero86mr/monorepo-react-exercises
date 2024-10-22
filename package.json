@@ -11,6 +11,8 @@
   "license": "ISC",
   "private": true,
   "workspaces": [
-    "multiple-item-selector"
+    "multiple-item-selector",
+    "get-random-color",
+    "get-random-number"
   ]
 }

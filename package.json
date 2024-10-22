@@ -1,0 +1,16 @@
+{
+  "name": "monorepo-ejercicios-react",
+  "version": "1.0.0",
+  "description": "monorepo for ReactJs related exercises",
+  "main": "index.js",
+  "keywords": [
+    "monorepo",
+    "react",
+    "typescript"
+  ],
+  "license": "ISC",
+  "private": true,
+  "workspaces": [
+    "multiple-item-selector"
+  ]
+}

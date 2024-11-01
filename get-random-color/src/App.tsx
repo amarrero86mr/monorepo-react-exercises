@@ -1,11 +1,19 @@
 import { useState } from "react";
 import "./App.css";
 import { getRandomColorRgb } from "./utils/get-random-color.util";
+import { HistoryContainer } from "./components/history/history-container";
+import { TColor } from "./schema/color.type";
 
 function App() {
   const [color, setColor] = useState("");
 
-  const [history, setHistory] = useState<Array<string>>([]);
+  const [history, setHistory] = useState<Array<TColor>>([]);
+
+  const selectColor = (a: string) => {
+    setColor(a);
+    const obj_color: TColor = { id: history.length, rgb: a };
+    setHistory([...history, obj_color]);
+  };
 
   return (
     <>
@@ -13,27 +21,16 @@ function App() {
         <h1
           onClick={() => {
             const new_color = getRandomColorRgb();
-            setColor(new_color);
-            setHistory([...history, new_color]);
+            selectColor(new_color);
           }}
         >
           Click me!
         </h1>
 
-        {history.map((c) => (
-          <div
-            key={c}
-            style={{ backgroundColor: c }}
-            onClick={() =>
-              console.log(
-                "se setea el color este como nuevo color del 'click-me!'",
-                "se vuelve a añadir este color al historial"
-              )
-            }
-          >
-            {c}
-          </div>
-        ))}
+        <HistoryContainer
+          history={history}
+          fnHandleSetColor={selectColor}
+        ></HistoryContainer>
       </section>
     </>
   );

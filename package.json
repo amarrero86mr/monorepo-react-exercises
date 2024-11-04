@@ -13,6 +13,7 @@
   "workspaces": [
     "multiple-item-selector",
     "get-random-color",
-    "get-random-number"
+    "get-random-number",
+    "greetings-bot"
   ]
 }

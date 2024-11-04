@@ -14,6 +14,9 @@
     "multiple-item-selector",
     "get-random-color",
     "get-random-number",
-    "greetings-bot"
+    "greetings-bot",
+    "click-machine",
+    "bipartisan-vote",
+    "real-vote"
   ]
 }

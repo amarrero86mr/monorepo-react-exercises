@@ -1,0 +1,45 @@
+.buttonsVote {
+    margin: 0.5rem;
+    margin-top: 2rem;
+    justify-content: center;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.buttonsVote button {
+    padding: 0.5rem 1rem;
+    font-family: fantasy;
+    font-size: 20px;
+}
+
+.btnBat {
+    color: yellow;
+    background-color: gray;
+    border: solid 2px black;
+}
+
+.btnSup {
+    color: red;
+    background-color: blue;
+    border: solid 2px red;
+}
+
+.result{
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.resultBat{
+    padding: .5rem;
+    border: solid 2px black;
+    color: black;
+}
+
+.resultSup{
+    padding: .5rem;
+    border: solid 2px blue;
+    color: blue
+}

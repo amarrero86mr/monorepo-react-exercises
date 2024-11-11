@@ -24,7 +24,7 @@ function App() {
           >Click me!</button>
         </div>
       </section>
-      <div className="flex m-3">
+      <div className="flex">
         {/* <p>{historyElement}</p> */}
         <ElementsContainer history={historyElement}></ElementsContainer>
       </div>

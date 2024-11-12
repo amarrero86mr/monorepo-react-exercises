@@ -1,9 +1,59 @@
+import { useState } from "react";
 import "./App.css";
+import { Candidates } from "./components/candidates";
+
+export type TCandidates = {
+  [key: string] : number
+}
+
+const candidateList: TCandidates = {
+  
+}
 
 function App() {
+  const [ padronElect, setPadronElect ] = useState<TCandidates>(candidateList)
+  const [ newCandidate, setNewCandidate ] = useState('')
+  
+
+  const addNewCandidate = () => {
+    if (newCandidate !== '') {
+      const newCandiBajo = newCandidate.toLowerCase();
+      setPadronElect( data => ({
+        ...data, [newCandiBajo]: (data[newCandiBajo] || 0) + 1
+      }));
+      setNewCandidate('')
+    }
+  }
+
+  const addNewVote = (key: string) => {
+    setPadronElect( data => ({
+      ...data, [key]: data[key] +1
+    }));
+  };
+
   return (
     <>
       <h1 className="text-center text-3xl">real vote</h1>
+      <div className="nuevoCandidate">
+        <input type="text" 
+        className=" text-2xl border-2 border-yellow-400" 
+        placeholder="agrege nuevo candidate"
+        value={newCandidate}
+        onChange={(e) => setNewCandidate(e.target.value) }
+        />
+
+        <button type="submit"
+        className="text-2xl bg-stone-300 border-2 border-400"
+        onClick={addNewCandidate}
+        
+        >nuevo candidate</button>
+
+      </div>
+
+      <Candidates 
+        datos={padronElect}
+        fnaddNewVote={addNewVote}
+      ></Candidates>
     </>
   );
 }

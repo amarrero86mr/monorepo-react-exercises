@@ -33,24 +33,26 @@ function App() {
 
   return (
     <>
-      <h1 className="text-center text-3xl">real vote</h1>
-      <div className="nuevoCandidate">
+      <h1 
+        className="text-center text-3xl m-6 hover:text-red-900 transition-all duration-300 ease-in-out"
+      >real vote</h1>
+      <div className="nuevoCandidate text-center">
         <input type="text" 
-        className=" text-2xl border-2 border-yellow-400" 
+        className=" text-2xl border-2 border-yellow-400 rounded-xl p-1.5 m-2" 
         placeholder="agrege nuevo candidate"
         value={newCandidate}
         onChange={(e) => setNewCandidate(e.target.value) }
         />
 
         <button type="submit"
-        className="text-2xl bg-stone-300 border-2 border-400"
+        className="text-2xl bg-stone-300 border-2 p-1.5 rounded-full active:bg-stone-400"
         onClick={addNewCandidate}
         
         >nuevo candidate</button>
 
       </div>
 
-      <Candidates 
+      <Candidates
         datos={padronElect}
         fnaddNewVote={addNewVote}
       ></Candidates>

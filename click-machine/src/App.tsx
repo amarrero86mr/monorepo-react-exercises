@@ -3,7 +3,7 @@ import "./App.css";
 import { ElementsContainer } from "./Component/element-constainer";
 
 function App() {
-  const [historyElement, setHistory] = useState<Array<number>>([0])
+  const [historyElement, setHistory] = useState<Array<number>>([])
   
   
 
@@ -17,7 +17,7 @@ function App() {
             className="w-20 h-8 border-2 border-emerald-700 font-medium"
             onClick={() => {
               
-              let newElement = historyElement[0] + 1;
+              let newElement = historyElement.length + 1;
               setHistory([newElement, ...historyElement])
               console.log(historyElement)
             }}

@@ -18,6 +18,7 @@
     "click-machine",
     "bipartisan-vote",
     "real-vote",
-    "fake-store"
+    "fake-store",
+    "filter-jobs"
   ]
 }

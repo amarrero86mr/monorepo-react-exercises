@@ -6,12 +6,8 @@ export type TCandidates = {
   [key: string] : number
 }
 
-const candidateList: TCandidates = {
-  
-}
-
 function App() {
-  const [ padronElect, setPadronElect ] = useState<TCandidates>(candidateList)
+  const [ padronElect, setPadronElect ] = useState<TCandidates>({})
   const [ newCandidate, setNewCandidate ] = useState('')
   
 
